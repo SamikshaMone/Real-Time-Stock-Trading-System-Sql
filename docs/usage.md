@@ -79,7 +79,7 @@ To see the triggers in action, insert a `transaction` into the Transactions tabl
 INSERT INTO Transactions (order_id, stock_id, user_id, quantity, price) VALUES (1, 1, 1, 10, 150.00);
 ```
 
-##Observe Changes
+## Observe Changes
 
 After inserting the transaction, observe the changes in the UserProfiles and StockPrices tables.
 
