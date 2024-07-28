@@ -67,4 +67,17 @@ To place a new order, use the `AddOrder` stored procedure:
 ```sql
 CALL AddOrder(1, 1, 'BUY', 10, 150.00);
 ```
+## Using Stored Procedures
+
+The following sections describe how to test the triggers included in this project.
+
+### Insert a Transaction
+
+To see the triggers in action, insert a `transaction` into the Transactions table:
+
+```sql
+INSERT INTO Transactions (order_id, stock_id, user_id, quantity, price) VALUES (1, 1, 1, 10, 150.00);
+```
+
+
 
