@@ -1,5 +1,6 @@
 use stock_trading ;
 
+
 -- Title :- stock_trading 
 -- Date :- 28-07-2024
 -- Tool used :- Mysql
@@ -7,6 +8,7 @@ use stock_trading ;
 
 -- stock_trading Details --
 -- Business questions--
+
 
 -- Q1. How many users have registered in the system?
     SELECT COUNT(*) AS total_users
