@@ -6,10 +6,10 @@ use stock_trading ;
 -- Tool used :- Mysql
 
 
--- Setting the delimiter to // to allow multi-line trigger definitions
+-- 1. Setting the delimiter to // to allow multi-line trigger definitions
 DELIMITER //
 
--- Trigger to update user account balance after a transaction is inserted
+-- 2. Trigger to update user account balance after a transaction is inserted
 CREATE TRIGGER UpdateUserBalanceAfterTransaction
 AFTER INSERT ON Transactions
 FOR EACH ROW
@@ -36,7 +36,7 @@ BEGIN
     END IF;
 END //
 
--- Trigger to update stock prices after a transaction is inserted
+-- 3. Trigger to update stock prices after a transaction is inserted
 CREATE TRIGGER UpdateStockPriceAfterTransaction
 AFTER INSERT ON Transactions
 FOR EACH ROW
@@ -46,7 +46,7 @@ BEGIN
     VALUES (NEW.stock_id, NEW.price, NOW());
 END //
 
--- Trigger to execute an order after it is inserted into the Orders table
+-- 4. Trigger to execute an order after it is inserted into the Orders table
 CREATE TRIGGER ExecuteOrderAfterInsert
 AFTER INSERT ON Orders
 FOR EACH ROW
@@ -110,5 +110,5 @@ BEGIN
     END IF;
 END //
 
--- Reset the delimiter to the default ;
+-- 5. Reset the delimiter to the default ;
 DELIMITER ;
