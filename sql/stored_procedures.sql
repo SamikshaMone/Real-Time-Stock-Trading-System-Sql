@@ -1,3 +1,4 @@
+use stock_trading ;
 
 -- Title :- stock_trading 
 -- Date :- 28-07-2024
