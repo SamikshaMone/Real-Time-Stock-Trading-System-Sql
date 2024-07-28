@@ -1,9 +1,11 @@
 CREATE DATABASE IF NOT EXISTS stock_trading;
 USE stock_trading;
 
+
 -- Title :- stock_trading 
 -- Date :- 28-07-2024
 -- Tool used :- Mysql
+
 
 -- 1. Creating table (Users)
 CREATE TABLE Users (
