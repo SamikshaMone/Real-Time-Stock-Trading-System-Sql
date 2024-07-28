@@ -1,6 +1,10 @@
 CREATE DATABASE IF NOT EXISTS stock_trading;
 USE stock_trading;
 
+-- Title :- stock_trading 
+-- Date :- 28-07-2024
+-- Tool used :- Mysql
+
 -- 1. Creating table (Users)
 CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -10,12 +14,14 @@ CREATE TABLE Users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 2. Creating table (UserProfiles)
 CREATE TABLE UserProfiles (
     user_id INT PRIMARY KEY,
     account_balance DECIMAL(10, 2) DEFAULT 0.00,
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
+-- 3. Creating table (Stocks)
 CREATE TABLE Stocks (
     stock_id INT AUTO_INCREMENT PRIMARY KEY,
     ticker VARCHAR(10) NOT NULL,
@@ -23,6 +29,7 @@ CREATE TABLE Stocks (
     market VARCHAR(10) NOT NULL
 );
 
+-- 4. Creating table (Orders)
 CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
@@ -36,6 +43,7 @@ CREATE TABLE Orders (
     FOREIGN KEY (stock_id) REFERENCES Stocks(stock_id)
 );
 
+-- 5. Creating table (Transactions)
 CREATE TABLE Transactions (
     transaction_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
@@ -49,6 +57,7 @@ CREATE TABLE Transactions (
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
+-- 6. Creating table (StockPrices)
 CREATE TABLE StockPrices (
     price_id INT AUTO_INCREMENT PRIMARY KEY,
     stock_id INT,
