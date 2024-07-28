@@ -65,11 +65,6 @@ CALL AddStock('MSFT', 'Microsoft Corporation', 'NASDAQ');
 To place a new order, use the `AddOrder` stored procedure:
 
 ```sql
-CALL AddUser('john_doe', 'hashed_password', 'john@example.com');
+CALL AddOrder(1, 1, 'BUY', 10, 150.00);
 ```
-### Execute a Transaction
-To execute a transaction, use the `ExecuteTransaction` stored procedure:
 
-```sql
-CALL AddUser('john_doe', 'hashed_password', 'john@example.com');
-```
