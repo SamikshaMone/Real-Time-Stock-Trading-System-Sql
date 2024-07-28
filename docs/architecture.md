@@ -101,4 +101,3 @@ Here is a summary of the database schema with primary and foreign key relationsh
 - **Orders** (`order_id` primary key, foreign keys reference `Users`(`user_id`), `Stocks`(`stock_id`))
 - **Transactions** (`transaction_id` primary key, foreign keys reference `Orders`(`order_id`), `Stocks`(`stock_id`), `Users`(`user_id`))
 - **StockPrices** (`price_id` primary key, foreign key references `Stocks`(`stock_id`))
-- 
