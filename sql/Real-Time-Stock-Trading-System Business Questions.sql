@@ -1,9 +1,9 @@
-use Restaurant_Rating_Analysis;
+use stock_trading ;
 
--- Title :- Restaurant_Ratings_Analysis 
+-- Title :- stock_trading 
 -- Date :- 28-07-2024
 -- Tool used :- Mysql
 
 
--- Restaurant Details --
+-- stock_trading Details --
 -- Business questions--
