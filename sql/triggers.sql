@@ -1,3 +1,10 @@
+
+
+-- Title :- stock_trading 
+-- Date :- 28-07-2024
+-- Tool used :- Mysql
+
+
 -- Setting the delimiter to // to allow multi-line trigger definitions
 DELIMITER //
 
