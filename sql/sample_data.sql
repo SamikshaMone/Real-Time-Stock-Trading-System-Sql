@@ -1,5 +1,11 @@
 USE stock_trading;
 
+
+-- Title :- stock_trading 
+-- Date :- 28-07-2024
+-- Tool used :- Mysql
+
+
 --1. Insert sample data into the Users table
     INSERT INTO Users (username, password_hash, email) VALUES 
     ('alice', 'hashed_password1', 'alice@example.com'),
