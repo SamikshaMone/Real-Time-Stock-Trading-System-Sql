@@ -81,5 +81,5 @@ INSERT INTO Transactions (order_id, stock_id, user_id, quantity, price) VALUES (
 
 ## Observe Changes
 
-After inserting the transaction, observe the changes in the UserProfiles and StockPrices tables.
+After inserting the transaction, observe the changes in the `UserProfiles` and `StockPrices` tables.
 
