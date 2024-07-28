@@ -67,3 +67,4 @@ USE stock_trading;
         timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (stock_id) REFERENCES Stocks(stock_id)
     );
+
