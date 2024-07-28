@@ -6,10 +6,10 @@ use stock_trading ;
 -- Tool used :- Mysql
 
 
--- Setting the delimiter to // to allow multi-line procedure definitions
+-- 1. Setting the delimiter to // to allow multi-line procedure definitions
 DELIMITER //
 
--- Stored procedure to add a new user to the Users table
+-- 2. Stored procedure to add a new user to the Users table
 CREATE PROCEDURE AddUser(
     IN p_username VARCHAR(50),
     IN p_password_hash VARCHAR(255),
@@ -21,7 +21,7 @@ BEGIN
     VALUES (p_username, p_password_hash, p_email);
 END //
 
--- Stored procedure to add a new stock to the Stocks table
+-- 3. Stored procedure to add a new stock to the Stocks table
 CREATE PROCEDURE AddStock(
     IN p_ticker VARCHAR(10),
     IN p_name VARCHAR(100),
@@ -33,7 +33,7 @@ BEGIN
     VALUES (p_ticker, p_name, p_market);
 END //
 
--- Stored procedure to add a new order to the Orders table
+-- 4. Stored procedure to add a new order to the Orders table
 CREATE PROCEDURE AddOrder(
     IN p_user_id INT,
     IN p_stock_id INT,
@@ -47,7 +47,7 @@ BEGIN
     VALUES (p_user_id, p_stock_id, p_order_type, p_quantity, p_price, 'PENDING');
 END //
 
--- Stored procedure to execute a transaction based on an order
+-- 5. Stored procedure to execute a transaction based on an order
 CREATE PROCEDURE ExecuteTransaction(
     IN p_order_id INT,
     IN p_quantity INT,
@@ -75,5 +75,5 @@ BEGIN
     END IF;
 END //
 
--- Reset the delimiter to the default ;
+-- 6. Reset the delimiter to the default ;
 DELIMITER ;
