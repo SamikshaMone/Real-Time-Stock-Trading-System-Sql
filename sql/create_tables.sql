@@ -1,6 +1,7 @@
 CREATE DATABASE IF NOT EXISTS stock_trading;
 USE stock_trading;
 
+-- 1. Creating table (Users)
 CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
